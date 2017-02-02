@@ -23,81 +23,58 @@ else
 
 $parametre = '';
 $page = explode('.', $page);
-if(Auth::isOnline())
+require(TPL.'/menu.php');
+switch ($page[0])
 {
-    require(TPL.'/menu.php');
-    switch ($page[0])
-    {
-	   case "index":
-            $class = 'ControllerIndex';
+	case "index":
+        $class = 'ControllerIndex';
+        $action = 'accueil';
+        if(empty($page[1]))
+        {
             $action = 'accueil';
-            if(empty($page[1]))
+        }
+        else
+        {
+            if ($page[1] == 'accueil')
             {
-                $action = 'accueil';
-            }
-            else
-            {
-                if ($page[1] == 'login')
-                {
-                    $action = 'accueil';
-                }
-                elseif ($page[1] == 'accueil'
-                    || $page[1] == 'disconnect')
-                {
-                    $action = $page[1];  
-                }
-
+                $action = $page[1];  
             }
 
-
-        break;
-        case "documents":
-            $class = 'ControllerDocuments';
+        }
+    break;
+    case "documents":
+        $class = 'ControllerDocuments';
+        $action = 'exploits';
+        if(empty($page[1]))
+        {
             $action = 'exploits';
-            if(empty($page[1]))
+        }
+        else
+        {
+            if ($page[1] == 'exploits' )
             {
-                $action = 'exploits';
+                $action = $page[1];
             }
-            else
+            elseif($page[1] == 'exploit')
             {
-                if ($page[1] == 'exploits' 
-                || $page[1] == 'add')
+                $action = $page[1];
+                if(empty($page[2]))
                 {
-                    $action = $page[1];
+                    $parametre = 1;
                 }
-                elseif($page[1] == 'exploit')
+                else
                 {
-                    $action = $page[1];
-                    if(empty($page[2]))
-                    {
-                        $parametre = 1;
-                    }
-                    else
-                    {
-                        $parametre = intval($page[2]);
-                    }  
-                }
+                    $parametre = intval($page[2]);
+                }  
             }
-        break;
-        default:
-            $class = 'ControllerIndex';
-            $action = 'login';
-        break;
-    }    
-}
-else
-{
-    if ($page[0] == 'index' && $page[1] == 'register')
-    {
+        }
+    break;
+    default:
         $class = 'ControllerIndex';
-        $action = $page[1];
-    }
-    else
-    {
-        $class = 'ControllerIndex';
-        $action = 'login';
-    }
-}
+        $action = 'accueil';
+    break;
+}    
+
     App::load($class);
     $controller = new $class;
     $controller->$action($parametre);
