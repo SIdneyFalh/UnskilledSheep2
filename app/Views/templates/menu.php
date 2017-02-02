@@ -6,6 +6,7 @@
 			<ul class="dropdown-menu">
 				<li>
 					<a href="?page=documents.exploits">Exploits</a>
+					<a href="?page=documents.tutos">Tutoriels</a>
 				</li>
           	</ul>
     	</li>
