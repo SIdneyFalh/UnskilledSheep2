@@ -10,6 +10,34 @@ class ControllerDocuments extends Controller
 		$this->setModel('documents');
 	}
 
+	public function tutos()
+	{
+		$this->setCategory('tuto');
+		$this->setMethod('documents');
+		require($this->getModel().$this->getMethod().'.php');
+		$documents = new Documents;
+		$lesDocs = $documents->listDocuments($this->getCategory());
+		require($this->getView().$this->getMethod().'.php');
+	}
+
+	public function tuto($id)
+	{
+		$this->setCategory('tuto');
+		$this->setMethod('documents');
+		require($this->getModel().$this->getMethod().'.php');
+		$documents = new Documents;
+		$unTuto = $documents->getDocument($id, $this->getCategory());
+		if($documents->existeDoc($id, $this->getCategory()))
+		{
+			$this->setMethod('tuto');
+		}
+		else
+		{
+			$this->setMethod('nodoc');
+		}
+		require($this->getView().$this->getMethod().'.php');
+	}
+
 	public function exploits()
 	{
 		$this->setCategory('exploit');

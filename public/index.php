@@ -51,11 +51,11 @@ switch ($page[0])
         }
         else
         {
-            if ($page[1] == 'exploits' )
+            if ($page[1] == 'exploits' || $page[1] == 'tutos')
             {
                 $action = $page[1];
             }
-            elseif($page[1] == 'exploit')
+            elseif($page[1] == 'exploit' || $page[1] == 'tuto')
             {
                 $action = $page[1];
                 if(empty($page[2]))
