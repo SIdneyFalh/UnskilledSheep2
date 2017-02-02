@@ -8,6 +8,8 @@
 		<span class="glyphicon glyphicon-chevron-right pull-right"></span>
 			Des Exploits
 		</a>
+	</ul>
+	<ul class="list-group">
 		<a href="?page=documents.tutos" class="list-group-item active">
 		<span class="glyphicon glyphicon-chevron-right pull-right"></span>
 			Des Tutoriels
