@@ -3,7 +3,7 @@
 </div>
 <div class="bleu">
 	<dl>
-		<img src="/image/<?=$this->getCategory();?>/<?= Secu::xss($unTuto->image);?>" class="img-responsive">
+		<img src="/image/<?=$this->getCategory();?>/<?= Secu::xss($unTuto->image);?>" class="img-responsive center-block">
 	</dl>
 	<dl>
 		<dt>Description: </dt>
@@ -17,6 +17,6 @@
 	</dl>
 	<dl>
 		<dt>Auteur: </dt>
-		<dd><?= Secu::xss($unTuto->login); ?></dd>
+		<dd><a href="<?= Secu::xss($unTuto->site);?>" class="link"><?= Secu::xss($unTuto->login); ?></a></dd>
 	</dl>
 </div>
