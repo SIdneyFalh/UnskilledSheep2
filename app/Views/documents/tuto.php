@@ -9,9 +9,7 @@
 	<dl>
 		<dt>Contenu: </dt>
 		<dd>
-			<pre>
-				<code class="language-<?= Secu::xss($unTuto->libelle); ?>"><?= Secu::xss($unTuto->contenu); ?></code>
-			</pre>
+			<pre><code class="language-<?= Secu::xss($unTuto->libelle); ?>"><?= Secu::xss($unTuto->contenu); ?></code></pre>
 		</dd>
 	</dl>
 	<dl>
