@@ -19,4 +19,9 @@
 		<dt>Auteur: </dt>
 		<dd><a href="<?= Secu::xss($unTuto->site);?>" class="link"><?= Secu::xss($unTuto->login); ?></a></dd>
 	</dl>
+	<dl>
+		<a href="http://twitter.com/share" class="twitter-share-button" 
+  		data-count="vertical" data-via="BugRecovery">Tweet</a>
+		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	</dl>
 </div>
