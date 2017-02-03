@@ -21,7 +21,7 @@
 	</dl>
 	<dl>
 		<a href="http://twitter.com/share" class="twitter-share-button" 
-  		data-count="vertical" data-via="BugRecovery">Tweet</a>
+  		data-count="vertical" data-text="<?= Secu::xss($unTuto->description); ?>" data-via="<?= Secu::xss($unTuto->login); ?>">Tweet</a>
 		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	</dl>
 </div>
