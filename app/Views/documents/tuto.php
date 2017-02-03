@@ -3,6 +3,9 @@
 </div>
 <div class="bleu">
 	<dl>
+		<img src="/image/<?=$this->getCategory();?>/<?= Secu::xss($unTuto->image);?>" class="img-responsive">
+	</dl>
+	<dl>
 		<dt>Description: </dt>
 		<dd><pre><?= Secu::xss($unTuto->description); ?></pre></dd>
 	</dl>

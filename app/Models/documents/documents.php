@@ -3,7 +3,7 @@ class Documents
 {
 	public function listDocuments($category)
 	{
-		$req = "SELECT documents.id, login, titre, description, contenu
+		$req = "SELECT documents.id, login, titre, description, contenu, image
 				FROM documents
 				INNER JOIN users ON documents.uid = users.id
 				WHERE categorie = :category";
@@ -13,7 +13,7 @@ class Documents
 
 	public function getDocument($id, $category)
 	{
-		$req = "SELECT login, titre, description, contenu, libelle
+		$req = "SELECT login, titre, description, contenu, libelle, image
 				FROM documents
 				INNER JOIN type ON type.id = documents.tid
 				INNER JOIN users ON documents.uid = users.id
