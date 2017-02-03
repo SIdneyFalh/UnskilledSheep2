@@ -2,7 +2,9 @@ html, body
 {
 	margin:0;
 	padding:0;
-	background-color: #95a5a6; 
+	background-color: (../image/background.jpg) no-repeat center fixed; 
+	-webkit-background-size: cover; /* pour anciens Chrome et Safari */
+	background-size: cover;
 
 }
 
