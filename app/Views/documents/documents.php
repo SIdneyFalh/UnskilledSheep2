@@ -13,7 +13,7 @@
 					</a>
   				</div>
   				<div class="panel-footer">
-  					<a href="<?= Secu::xss($leDoc->site);?>" class="link"><?= Secu::xss($leDoc->login); ?></a>
+  					Auteur: <a href="<?= Secu::xss($leDoc->site);?>" class="link"><?= Secu::xss($leDoc->login); ?></a>
   				</div>
 			</div>
 		<?php endforeach; ?>
