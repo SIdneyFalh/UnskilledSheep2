@@ -1,5 +1,5 @@
 <div class="soustitrebleu">
-	Bienvenue sur le site d'UnskilledSheep !
+	Bienvenue sur BugRecovery.fr !
 </div>
 <div class="bleu">
 	<label>Ici vous pouvez retrouver:</label>
