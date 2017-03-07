@@ -58,7 +58,7 @@ class Bdd
 		/** @var string mot de passe à utiliser avec le nom d'utilisateur */
 	private $mdp        = '';
 		/** @var boolean mode d'affichage des erreurs */
-	private $production = false;
+	private $production = true;
 		/** @var string mail à utiliser en cas de bug en mode production=true */
 	private $mail ;
 		/** @var array tableau des codes d'erreur à relâcher */
